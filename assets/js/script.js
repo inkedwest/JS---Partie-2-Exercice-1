@@ -1,3 +1,6 @@
-function changeImg(){
-  document.getElementById('image1').setAttribute('src', 'assets/img/image1_2.jpg');
+function change(object, ev){
+   if(ev == "over")
+     object.src = object.src.replace(/image1(\..+)$/, 'image1_2$1');
+   else
+     object.src = object.src.replace(/image1_2(\..+)$/, 'image1$1');
 }
